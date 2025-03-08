@@ -1,0 +1,82 @@
+@import 'vars';
+@import 'mixins';
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap');
+
+// html {
+//     scroll-behavior: smooth;
+// }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body {
+    font-family: $font-main;
+    background-color: $white;
+    color: black;
+    overflow-x: hidden;
+}
+
+a {
+    color: $white;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+        color: $accent;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 5px;
+    max-width: 1500px;
+
+    &--sm {
+        max-width: 840px;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+.title-2 {
+    font-size: 30px;
+    font-family: $font-main;
+    color: $accent;
+    font-weight: 700;
+
+    @include mediaTablet {
+        font-size: 28px;
+    }
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+a,
+.btn {
+    @media (hover: none) {
+        &:active{
+            transform: scale(0.9);
+        }
+    }
+}
+
